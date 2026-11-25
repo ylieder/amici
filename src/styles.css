@@ -1,11 +1,11 @@
 /* Amici – Pizza Napoletana
    Fonts as on the printed menu: Poppins (headings, names, prices), Cormorant Garamond (descriptions). */
 
-@font-face { font-family: "Poppins"; font-weight: 400; font-display: swap; src: url("/fonts/poppins-latin-400-normal.woff2") format("woff2"); }
-@font-face { font-family: "Poppins"; font-weight: 500; font-display: swap; src: url("/fonts/poppins-latin-500-normal.woff2") format("woff2"); }
-@font-face { font-family: "Poppins"; font-weight: 600; font-display: swap; src: url("/fonts/poppins-latin-600-normal.woff2") format("woff2"); }
-@font-face { font-family: "Cormorant Garamond"; font-weight: 500; font-display: swap; src: url("/fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2"); }
-@font-face { font-family: "Cormorant Garamond"; font-weight: 600; font-display: swap; src: url("/fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-weight: 400; font-display: swap; src: url("fonts/poppins-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-weight: 500; font-display: swap; src: url("fonts/poppins-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-weight: 600; font-display: swap; src: url("fonts/poppins-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-weight: 500; font-display: swap; src: url("fonts/cormorant-garamond-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cormorant Garamond"; font-weight: 600; font-display: swap; src: url("fonts/cormorant-garamond-latin-600-normal.woff2") format("woff2"); }
 
 :root {
   --paper: #fbf9f4;
@@ -119,3 +119,22 @@ address { font-style: normal; }
   .hero .rule, .btn { display: none; }
   body { background: #fff; }
 }
+
+/* ---------- Demo badge (set "demo": false in content/site.json to remove) ---------- */
+.demo-badge {
+  position: fixed; right: max(0.75rem, env(safe-area-inset-right)); top: max(0.75rem, env(safe-area-inset-top)); z-index: 50;
+  font-size: 0.8rem; line-height: 1.35; text-align: left;
+}
+.demo-badge summary {
+  display: block; list-style: none; cursor: pointer; user-select: none;
+  padding: 0.35rem 0.9rem; border-radius: 99px;
+  background: #c0392b; color: #fff; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+.demo-badge summary::-webkit-details-marker { display: none; }
+.demo-badge p {
+  position: absolute; right: 0; top: calc(100% + 0.5rem); margin: 0; width: min(16rem, calc(100vw - 1.5rem));
+  padding: 0.7rem 0.9rem; border-radius: 0.6rem; background: #fff; color: var(--ink); border: 2px solid #c0392b;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+@media print { .demo-badge { display: none; } }

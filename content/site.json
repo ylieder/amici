@@ -1,5 +1,6 @@
 {
   "_hilfe": "Allgemeine Angaben. Alle mit PLATZHALTER markierten Werte sind erfunden und müssen vor der Veröffentlichung ersetzt werden (sie fließen auch in Impressum und Datenschutz ein).",
+  "demo": true,
   "name": "Amici",
   "tagline": "Pizza Napoletana",
   "legalName": "Amici Pizza Napoletana (PLATZHALTER: Firmenname / Inhaber)",

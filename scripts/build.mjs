@@ -68,12 +68,12 @@ const shell = ({ site, title, description, body, home = false, dev }) => `<!doct
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}">
   <meta name="theme-color" content="#fbf9f4">
-  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="/fonts/poppins-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css">
-  ${home ? '' : '<meta name="robots" content="noindex">'}
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/poppins-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  ${site.demo ? '<meta name="robots" content="noindex, nofollow">' : home ? '' : '<meta name="robots" content="noindex">'}
 </head>
-<body${home ? ' class="home"' : ''}>
+<body class="${[home && 'home', site.demo && 'has-demo'].filter(Boolean).join(' ')}">
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="leaf" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12" fill="currentColor"/><path d="M7 17c0-6 3-9.500 10-10 0 6.500-3.500 10-9 10.200M7 17c2-3.500 4-5.500 6.500-7" fill="none" stroke="#fff" stroke-width="1.600" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   </svg>
@@ -81,14 +81,15 @@ ${body}
   <footer class="site-footer">
     <div class="rule"></div>
     <p>${esc(site.name)} ${esc(site.tagline)} · ${esc(site.street)} · ${esc(site.zip)} ${esc(site.city)}</p>
-    <p class="footer-links"><a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a></p>
+    <p class="footer-links"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
   </footer>
+  ${site.demo ? `<details class="demo-badge"><summary>Demo</summary><p>Entwurfsversion – nicht die finale Website. Inhalte, Texte und Rechtliches sind vorläufig.</p></details>` : ''}
   ${dev ? reloadSnippet : ''}
 </body>
 </html>
 `;
 
-const logo = (cls = '') => `<img class="logo ${cls}" src="/img/logo.svg" alt="Amici – Pizza Napoletana" width="880" height="380">`;
+const logo = (cls = '') => `<img class="logo ${cls}" src="img/logo.svg" alt="Amici – Pizza Napoletana" width="880" height="380">`;
 
 const homePage = (site, menu, dev) => {
   const hours = site.hours.map((h) => `<tr><th scope="row">${esc(h.days)}</th><td>${esc(h.time)}</td></tr>`).join('');
@@ -133,12 +134,12 @@ const legalPage = async (site, file, title, dev) => {
   const body = `
   <header class="legal-head">
     <div class="rule"></div>
-    <a href="/" aria-label="Zur Startseite">${logo('small-logo')}</a>
+    <a href="index.html" aria-label="Zur Startseite">${logo('small-logo')}</a>
   </header>
   <main class="wrap legal">
     <h1>${esc(title)}</h1>
     ${content}
-    <p><a href="/">← Zurück zur Speisekarte</a></p>
+    <p><a href="index.html">← Zurück zur Speisekarte</a></p>
   </main>`;
   return shell({ site, title: `${title} – ${site.name}`, description: title, body, dev });
 };
