@@ -1,0 +1,130 @@
+{
+  "_hilfe": "Speisekarte. Reihenfolge im Array = Reihenfolge auf der Website. Preise als Zahl (11.9), nicht als Text. Felder pro Eintrag: name, description, price, veg (true = vegetarisch-Blatt), tag (z. B. weiße), size (Füllmenge), extra (Zusatz unter dem Preis). Alle außer name sind optional. Abschnitte: id (für den Link), title, note (optional), group (speisen oder getraenke: Speisen stehen auf dem Handy immer vor den Getränken), column (1 oder 2, nur für die Desktop-Ansicht), items.",
+  "legend": {
+    "veg": "vegetarisch"
+  },
+  "sections": [
+    {
+      "id": "vorspeisen",
+      "title": "Vorspeisen & Salate",
+      "group": "speisen",
+      "column": 1,
+      "items": [
+        { "name": "Antipasti misti", "description": "Lassen Sie sich überraschen", "price": 16.9 },
+        { "name": "Burrata e Parma", "description": "Parmaschinken DOP, Basilikum-Pesto, Kirschtomaten, Frisch gehobelter Parmesan DOP auf Wildkräutersalat", "price": 14.5 },
+        { "name": "Fiocco di Capra", "veg": true, "description": "Karamellisierter Ziegenkäse mit regionalem Honig auf Wildkräutersalat, Kirschtomaten, Cashewnüsse, Honig-Limetten-Senf-Dressing", "price": 14.9 },
+        { "name": "Carpaccio di Rapa", "description": "Rote-Beete Carpaccio mit Schafskäse, Grünzeug, Evo-Öl und Zitrone", "price": 13.5 },
+        { "name": "Insalata Mista", "veg": true, "description": "Wildkräutersalat, Kirschtomaten, Gurken, rote Zwiebeln, Taggiasche Oliven, Honig-Limetten-Senf-Dressing", "price": 13.5 }
+      ]
+    },
+    {
+      "id": "pizze-rosse",
+      "title": "Pizze Rosse",
+      "group": "speisen",
+      "column": 1,
+      "items": [
+        { "name": "Marinara", "description": "San-Marzano-Tomaten, Sardellen, Oliven, Oregano, Evo-Öl", "price": 11.9, "extra": "Mozz. + 1,0 €" },
+        { "name": "Margherita", "veg": true, "description": "San-Marzano-Tomaten, Basilikum, Grana DOP, Fior di Latte, Evo-Öl", "price": 11.5 },
+        { "name": "Margherita e Salsiccia", "description": "San-Marzano-Tomaten, Basilikum, Grana DOP, Fior di Latte, Evo-Öl, Fenchelsalsiccia", "price": 14.9 },
+        { "name": "Diavola", "description": "San-Marzano-Tomaten, Basilikum, Grana DOP, Fior di Latte, Spianata-Salami (scharf), Evo-Öl", "price": 14.9 },
+        { "name": "Capricciosa", "description": "San-Marzano-Tomaten, Basilikum, Grana DOP, Kochschinken, Fior di Latte, Oliven, Artischocken, Champignon, Evo-Öl", "price": 15.9 },
+        { "name": "Cotto e Funghi", "description": "San-Marzano-Tomaten, Basilikum, Grana DOP, Kochschinken, Fior di Latte, Champignon, Evo-Öl", "price": 13.9 },
+        { "name": "Salame", "description": "San-Marzano-Tomaten, Basilikum, Grana DOP, Edel Salami, Fior di Latte, Evo-Öl", "price": 13.9 },
+        { "name": "Tonno e Cipolla", "description": "San-Marzano-Tomaten, Basilikum, Grana DOP, Fior di Latte, Thunfisch, Oliven, Zwiebeln, Evo-Öl", "price": 15.5 },
+        { "name": "Ortolana", "tag": "auch Vegan", "veg": true, "description": "San-Marzano-Tomaten, Basilikum, Grana DOP, Fior di Latte, gegrilltes Gemüse, Evo-Öl", "price": 14.3 }
+      ]
+    },
+    {
+      "id": "pizze-bianche",
+      "title": "Pizze Bianche",
+      "group": "speisen",
+      "column": 2,
+      "items": [
+        { "name": "4 Formaggi", "tag": "weiße", "veg": true, "description": "Basilikum, Fior di Latte, Grana DOP, Gorgonzola, Geräucherter Scamorza, Evo-Öl", "price": 13.9 },
+        { "name": "Salsiccia e Friarielli", "tag": "weiße", "description": "Fior di Latte, Basilikum, Salsiccia mit Fenchel, Stängelkohl, Evo-Öl", "price": 15.5 },
+        { "name": "Mortadella e Burrata", "tag": "weiße", "description": "Evo-Öl, Fior di Latte, Basilikum, Mortadella, Burrata, Pacchetelle del Piennolo DOP, Pistazien-Pesto", "price": 17.5 },
+        { "name": "Amici", "tag": "weiße", "veg": true, "description": "Evo-Öl, Fior di Latte, Grana DOP, Buffel Mozzarella (bocconcini), Pacchetelle del Piennolo DOP, Basilikum-Pesto", "price": 15.5 },
+        { "name": "Bresaola", "description": "Evo-Öl, Fior di Latte, Grana DOP, Pacchetelle del Piennolo DOP, Bresaola, Basilikum-Pesto", "price": 17.5 },
+        { "name": "Calabrese", "description": "Evo-Öl, Fior di Latte, Basilikum, Pecorino DOP, karamellisierte Zwiebeln, ’Nduja, Pacchetelle del Piennolo", "price": 16.5 },
+        { "name": "Zola – ’Nduja", "description": "Basilikum, Fior di Latte, Grana DOP, Gorgonzola, ’Nduja", "price": 15.5 },
+        { "name": "Caprino e Timo", "veg": true, "description": "Basilikum, Evo-Öl, Fior di Latte, Formaggio di Capra, Thymian, Pacchetelle del Piennolo, Honig", "price": 17.5 }
+      ]
+    },
+    {
+      "id": "softgetraenke",
+      "title": "Soft-Getränke",
+      "group": "getraenke",
+      "column": 1,
+      "items": [
+        { "name": "fritz-kola", "size": "0,33", "price": 3.8 },
+        { "name": "fritz-kola Zuckerfrei", "size": "0,33", "price": 3.8 },
+        { "name": "fritz-spritz", "description": "Verschiedene Sorten …", "size": "0,33", "price": 3.8 },
+        { "name": "Ice Tea", "description": "Peach | Lemon", "size": "0,33", "price": 3.8 },
+        { "name": "Wasser", "description": "Naturell | Sprudel", "size": "0,27", "price": 2.9 },
+        { "name": "Wasser", "description": "Naturell | Sprudel", "size": "0,80", "price": 6.8 }
+      ]
+    },
+    {
+      "id": "dessert",
+      "title": "Dessert",
+      "group": "speisen",
+      "column": 2,
+      "note": "Für unsere süßen Kreationen sprechen Sie uns einfach an",
+      "items": []
+    },
+    {
+      "id": "bier",
+      "title": "Bier",
+      "group": "getraenke",
+      "column": 1,
+      "items": [
+        { "name": "Moretti", "size": "0,33", "price": 3.8 },
+        { "name": "Moretti Limone", "size": "0,33", "price": 3.9 },
+        { "name": "Ichnusa", "size": "0,33", "price": 3.8 },
+        { "name": "Duckstein", "size": "0,50", "price": 4.9 },
+        { "name": "Hefe", "size": "0,50", "price": 4.5 },
+        { "name": "Hefe alkoholfrei", "size": "0,50", "price": 4.5 },
+        { "name": "Veltins alkoholfrei", "size": "0,33", "price": 3.8 }
+      ]
+    },
+    {
+      "id": "kaffee",
+      "title": "Kaffee",
+      "group": "getraenke",
+      "column": 2,
+      "note": "Alle Spezialitäten wahlweise mit Hafermilch (+ 0,20 €) / wahlweise alles koffeinfrei",
+      "items": [
+        { "name": "Café Crema", "price": 3.8 },
+        { "name": "Espresso", "price": 2.5 },
+        { "name": "Espresso Macchiato", "price": 3.0 },
+        { "name": "Espresso Doppelt", "price": 4.0 },
+        { "name": "Cappuccino", "price": 4.0 },
+        { "name": "Latte Macchiato", "price": 4.5 },
+        { "name": "Ice Latte", "price": 5.0 },
+        { "name": "Kakao", "price": 4.0 }
+      ]
+    },
+    {
+      "id": "digestif",
+      "title": "Digestif",
+      "group": "getraenke",
+      "column": 2,
+      "items": [
+        { "name": "Limoncello", "size": "4 cl", "price": 3.8 },
+        { "name": "Ramazzotti", "size": "4 cl", "price": 3.8 },
+        { "name": "Averna", "size": "4 cl", "price": 3.8 },
+        { "name": "Sambuca", "size": "4 cl", "price": 3.8 },
+        { "name": "Grappa", "size": "2 cl", "price": 4.0 },
+        { "name": "Mirto Rosso", "size": "4 cl", "price": 3.8 }
+      ]
+    },
+    {
+      "id": "wein",
+      "title": "Wein",
+      "group": "getraenke",
+      "column": 2,
+      "note": "Lust auf Wein? Unsere Weinkarte gibt’s auf Anfrage!",
+      "items": []
+    }
+  ]
+}

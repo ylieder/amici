@@ -1,0 +1,44 @@
+{
+  "_hilfe": "Allgemeine Angaben. Alle mit PLATZHALTER markierten Werte sind erfunden und müssen vor der Veröffentlichung ersetzt werden (sie fließen auch in Impressum und Datenschutz ein).",
+  "name": "Amici",
+  "tagline": "Pizza Napoletana",
+  "legalName": "Amici Pizza Napoletana (PLATZHALTER: Firmenname / Inhaber)",
+  "owner": "Max Mustermann (PLATZHALTER)",
+  "street": "David-Mansfeld-Weg 2",
+  "zip": "38116",
+  "city": "Braunschweig",
+  "phone": "+49 531 47372324",
+  "phoneHref": "+4953147372324",
+  "email": "info@example.de",
+  "vatId": "DE000000000 (PLATZHALTER, falls vorhanden)",
+  "hosting": "Name des Hosting-Anbieters (PLATZHALTER)",
+  "lastUpdated": "November 2026",
+  "hours": [
+    {
+      "days": "Montag",
+      "time": "Ruhetag"
+    },
+    {
+      "days": "Dienstag",
+      "time": "12:00 – 14:30, 16:00 – 22:00"
+    },
+    {
+      "days": "Mittwoch",
+      "time": "16:00 – 22:00"
+    },
+    {
+      "days": "Donnerstag",
+      "time": "12:00 – 14:30, 16:00 – 22:00"
+    },
+    {
+      "days": "Freitag – Samstag",
+      "time": "16:00 – 22:00"
+    },
+    {
+      "days": "Sonntag",
+      "time": "16:00 – 20:30"
+    }
+  ],
+  "hoursNote": "",
+  "mapsUrl": "https://maps.app.goo.gl/rrMJYJbTFg133M4C7"
+}

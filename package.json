@@ -1,0 +1,11 @@
+{
+  "name": "amici",
+  "private": true,
+  "type": "module",
+  "description": "Website für Amici – Pizza Napoletana",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
